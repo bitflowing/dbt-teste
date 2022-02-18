@@ -16,10 +16,10 @@ SELECT
     CAST(JSON_EXTRACT_SCALAR(_airbyte_data, "$.spend") AS FLOAT64)  AS spend,
     CAST(JSON_EXTRACT_SCALAR(_airbyte_data, "$.impressions") AS INT64)  AS impressions,
     CAST(JSON_EXTRACT_SCALAR(_airbyte_data, "$.inline_link_clicks") AS INT64)  AS inline_link_clicks,
-    CAST(JSON_EXTRACT_SCALAR(_airbyte_data, "$.unique_inline_link_clicks") AS INT64)  AS unique_inline_link_clicks,
+    CAST(JSON_EXTRACT_SCALAR(_airbyte_data, "$.unique_inline_link_clicks") AS FLOAT64)  AS unique_inline_link_clicks,
     CAST(JSON_EXTRACT_SCALAR(_airbyte_data, "$.unique_clicks") AS INT64)  AS unique_clicks,
     CAST(JSON_EXTRACT_SCALAR(_airbyte_data, "$.clicks") AS INT64)  AS clicks,
-    CAST(JSON_EXTRACT_SCALAR(_airbyte_data, "$.frequency") AS INT64)  AS frequency,
+    CAST(JSON_EXTRACT_SCALAR(_airbyte_data, "$.frequency") AS FLOAT64)  AS frequency,
     CAST(JSON_EXTRACT_SCALAR(_airbyte_data, "$.reach") AS INT64)  AS reach,
     CAST(JSON_EXTRACT_SCALAR(_airbyte_data, "$.inline_post_engagement") AS INT64)  AS inline_post_engagement
 FROM 
