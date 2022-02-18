@@ -17,5 +17,3 @@ FROM
     bitflowin-nonprod.galeria_airbyte._airbyte_raw_bit_4901315733251836_ads_insights
 LEFT JOIN
     UNNEST(JSON_EXTRACT_ARRAY(_airbyte_data, "$.unique_actions")) AS actions
-WHERE DATE
-    (_airbyte_emitted_at) = CURRENT_DATE()
