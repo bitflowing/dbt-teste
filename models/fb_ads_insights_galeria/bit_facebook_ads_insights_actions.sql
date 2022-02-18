@@ -12,7 +12,7 @@ SELECT
     JSON_EXTRACT_SCALAR(_airbyte_data, "$.publisher_platform")  AS publisher_platform,
     JSON_EXTRACT_SCALAR(_airbyte_data, "$.platform_position")  AS platform_position,
     JSON_EXTRACT_SCALAR(actions, "$.action_type") AS action_type,
-    JSON_EXTRACT_SCALAR(actions, "$.value") AS "value"
+    JSON_EXTRACT_SCALAR(actions, "$.value") AS value
 FROM 
     bitflowin-nonprod.galeria_airbyte._airbyte_raw_bit_4901315733251836_ads_insights
 LEFT JOIN
