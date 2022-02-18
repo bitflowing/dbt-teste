@@ -21,7 +21,7 @@ SELECT
     CAST(JSON_EXTRACT_SCALAR(_airbyte_data, "$.clicks") AS INT64)  AS clicks
     CAST(JSON_EXTRACT_SCALAR(_airbyte_data, "$.frequency") AS INT64)  AS frequency
     CAST(JSON_EXTRACT_SCALAR(_airbyte_data, "$.reach") AS INT64)  AS reach
-    CAST(JSON_EXTRACT_SCALAR(_airbyte_data, "$.inline_post_engagement")  AS inline_post_engagement
+    CAST(JSON_EXTRACT_SCALAR(_airbyte_data, "$.inline_post_engagement") AS INT64)  AS inline_post_engagement
 FROM 
     bitflowin-nonprod.galeria_airbyte._airbyte_raw_bit_4901315733251836_ads_insights 
 WHERE DATE
